@@ -96,3 +96,50 @@ text-align:center;
 padding:40px;
 background:#020617;
 }
+
+.team{
+
+padding:80px 40px;
+text-align:center;
+
+}
+
+.team h2{
+
+font-size:36px;
+margin-bottom:40px;
+
+}
+
+.team-container{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+
+}
+
+.member-card{
+
+background:#1e293b;
+padding:25px;
+width:200px;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+}
+
+.member-card h3{
+
+margin-bottom:10px;
+
+}
+
+.member-card:hover{
+
+transform:translateY(-10px);
+background:#334155;
+
+}
