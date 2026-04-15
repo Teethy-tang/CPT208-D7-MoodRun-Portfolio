@@ -421,20 +421,11 @@ main {
   font-size: 0.92rem;
 }
 
-.team-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  color: #101020;
-  background: linear-gradient(135deg, #ffc857, #73e8ff);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  margin-bottom: 0.8rem;
-}
-
-.team-tags {
+.member-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #a5b4fc, #4f46e5);
   display: flex;
   gap: 0.45rem;
   flex-wrap: wrap;
