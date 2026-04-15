@@ -1,35 +1,19 @@
-// 导航链接平滑滚动（带 offset）
-function initSmoothScroll() {
-  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+// 根据当前页面路径高亮导航项
+function initActiveNav() {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  if (!navLinks.length) return;
 
-  links.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const targetId = link.getAttribute("href").slice(1);
-      const target = document.getElementById(targetId);
-      if (!target) return;
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
-      event.preventDefault();
-      const offset = 80; // 预留导航栏高度
-      const top =
-        target.getBoundingClientRect().top + window.scrollY - offset;
-
-      window.scrollTo({
-        top,
-        behavior: "smooth",
-      });
-    });
-  });
-}
-
-// Hero 按钮滚动到 Introduction
-function initHeroButton() {
-  const exploreBtn = document.getElementById("exploreBtn");
-  if (!exploreBtn) return;
-
-  exploreBtn.addEventListener("click", () => {
-    const intro = document.getElementById("intro");
-    if (!intro) return;
-    intro.scrollIntoView({ behavior: "smooth", block: "start" });
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href") || "";
+    if (linkPath === currentPath) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("is-active");
+      link.removeAttribute("aria-current");
+    }
   });
 }
 
@@ -52,7 +36,8 @@ function initRevealOnScroll() {
       });
     },
     {
-      threshold: 0.15,
+      threshold: 0.02,
+      rootMargin: "0px 0px 12% 0px",
     }
   );
 
@@ -61,7 +46,6 @@ function initRevealOnScroll() {
 
 // 初始化
 document.addEventListener("DOMContentLoaded", () => {
-  initSmoothScroll();
-  initHeroButton();
+  initActiveNav();
   initRevealOnScroll();
 });

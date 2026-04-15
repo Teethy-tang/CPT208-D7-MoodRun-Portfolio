@@ -1,192 +1,198 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Go Runners | CPT208</title>
+  <title>MoodRun | Process Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- 顶部导航 -->
   <header class="site-header">
     <nav class="navbar">
-      <div class="logo">GO RUNNERS · D-7</div>
+      <a class="logo" href="index.html">MoodRun // D-7</a>
       <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#design">Design</a></li>
-        <li><a href="#prototype">Prototype</a></li>
-        <li><a href="#evaluation">Evaluation</a></li>
-        <li><a href="#team">Team</a></li>
+        <li><a href="motivation.html">1. Motivation & Research</a></li>
+        <li><a href="requirements.html">2. User Requirements</a></li>
+        <li><a href="ideation.html">3. Ideation & Alternatives</a></li>
+        <li><a href="implementation.html">4. Technical Implementation</a></li>
+        <li><a href="evaluation.html">5. Evaluation & Reflection</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero 着陆区 -->
-    <section class="hero reveal" id="hero">
+    <section class="hero reveal">
+      <div class="hero-bg-layer" aria-hidden="true">
+        <svg class="hero-bg-svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="435" cy="178" r="170" fill="#4fc3f7" opacity="0.03"/>
+          <circle cx="770" cy="200" r="150" fill="#ff6b35" opacity="0.03"/>
+          <circle cx="600" cy="292" r="120" fill="#9b59b6" opacity="0.025"/>
+          <line x1="0" y1="110" x2="1200" y2="110" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+          <line x1="0" y1="280" x2="1200" y2="280" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+          <line x1="300" y1="0" x2="300" y2="420" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+          <line x1="600" y1="0" x2="600" y2="420" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+          <line x1="900" y1="0" x2="900" y2="420" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+          <ellipse cx="603" cy="226" rx="145" ry="100" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+          <ellipse cx="603" cy="226" rx="225" ry="150" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.03"/>
+          <ellipse cx="603" cy="226" rx="315" ry="205" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.025"/>
+          <line x1="110" y1="215" x2="470" y2="215" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+          <line x1="128" y1="230" x2="455" y2="230" stroke="#ffffff" stroke-width="0.5" opacity="0.035"/>
+          <line x1="118" y1="245" x2="474" y2="245" stroke="#ffffff" stroke-width="0.4" opacity="0.032"/>
+          <line x1="132" y1="260" x2="462" y2="260" stroke="#ffffff" stroke-width="0.4" opacity="0.03"/>
+          <line x1="120" y1="275" x2="470" y2="275" stroke="#ffffff" stroke-width="0.5" opacity="0.025"/>
+          <g class="runner-silhouette">
+            <g class="runner-silhouette-shape" transform="translate(0 -35) scale(1.10)" transform-origin="600 210">
+              <ellipse cx="600" cy="135" rx="28" ry="30"/>
+              <rect x="593" y="163" width="14" height="18" rx="5"/>
+              <path d="M572 180 Q585 178 608 175 L618 260 Q605 265 580 262 Z"/>
+              <path d="M572 188 Q550 220 538 250 Q534 258 542 260 Q550 262 556 252 Q568 228 582 200 Z"/>
+              <path d="M608 182 Q630 200 650 230 Q656 240 648 246 Q640 252 634 242 Q616 214 600 192 Z"/>
+              <path d="M580 260 Q568 292 555 328 Q548 345 560 348 Q570 350 576 334 Q590 296 598 268 Z"/>
+              <path d="M600 265 Q612 296 628 330 Q634 346 646 342 Q656 338 650 322 Q634 288 618 258 Z"/>
+              <path d="M555 346 Q545 360 540 368 Q535 374 550 375 Q566 375 572 364 Q574 356 564 349 Z"/>
+              <path d="M646 340 Q656 348 664 358 Q670 364 658 368 Q646 372 640 361 Q634 349 644 340 Z"/>
+            </g>
+          </g>
+          <g class="emoji-layer layer-near">
+            <text x="220" y="108" font-size="32" class="drift0">😊</text>
+            <text x="955" y="122" font-size="34" class="drift1">💪</text>
+            <text x="995" y="262" font-size="30" class="drift2">😌</text>
+          </g>
+          <g class="emoji-layer layer-mid">
+            <text x="860" y="84" font-size="28" class="drift3">🎵</text>
+            <text x="170" y="272" font-size="26" class="drift4">😤</text>
+            <text x="890" y="328" font-size="24" class="drift5">🌊</text>
+            <text x="280" y="170" font-size="18" class="drift6">💙</text>
+            <text x="420" y="366" font-size="22" class="drift7">😰</text>
+          </g>
+          <g class="emoji-layer layer-far">
+            <text x="290" y="70" font-size="22" class="drift0">✨</text>
+            <text x="900" y="58" font-size="20" class="drift1">⚡</text>
+            <text x="230" y="318" font-size="18" class="drift2">🔥</text>
+            <text x="1065" y="216" font-size="20" class="drift3">💭</text>
+            <text x="505" y="56" font-size="16" class="drift4">😄</text>
+            <text x="690" y="46" font-size="14" class="drift5">🎯</text>
+            <text x="112" y="148" font-size="16" class="drift6">😴</text>
+            <text x="1100" y="150" font-size="14" class="drift7">⭐</text>
+          </g>
+          <line x1="0" y1="346" x2="1200" y2="346" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
+        </svg>
+      </div>
       <div class="hero-inner">
-        <p class="hero-kicker">CPT208 · Human-Centric Computing</p>
-        <h1>Run Together. Run Further.</h1>
+        <p class="hero-kicker">CPT208  · Process Portfolio</p>
+        <h1>MOODRUN</h1>
         <p class="hero-subtitle">
-          A playful, human‑centred running experience for communities and organizers.
+          Emotion-Aware Running Companion
         </p>
         <div class="hero-actions">
-          <button id="exploreBtn" class="btn-primary">Explore the journey</button>
-          <a href="#prototype" class="btn-ghost">View prototype highlights</a>
+          <a class="btn-primary" href="motivation.html">Start Portfolio Quest</a>
+          <a class="btn-ghost" href="implementation.html">Jump to Prototype Logic</a>
         </div>
       </div>
     </section>
 
-    <!-- 项目简介 -->
-    <section class="section reveal" id="intro">
+    <section class="section reveal">
       <div class="section-header">
-        <h2>Project Introduction</h2>
+        <h2>Project Direction</h2>
         <p class="section-subtitle">
-          High‑level overview of Go Runners and course context.
-        </p>
-      </div>
-      <div class="section-body">
-        <p class="placeholder-text">
-          Placeholder for project background, goals, and target users.
-        </p>
-      </div>
-    </section>
-
-    <!-- User Research -->
-    <section class="section reveal" id="research">
-      <div class="section-header">
-        <h2>User Research</h2>
-        <p class="section-subtitle">
-          How we understood runners and organizers.
+          Retro-game visual tone, clear reading flow, and a strict five-part structure.
         </p>
       </div>
       <div class="section-body two-column">
         <article class="card">
-          <h3>Methods</h3>
-          <p class="placeholder-text">
-            Placeholder for interviews, surveys, and other research methods.
+          <h3>Concept Core</h3>
+          <p>
+            MoodRun focuses on emotional wellbeing during running. Instead of only
+            tracking speed and distance, the system responds to feelings like stress,
+            low motivation, or high energy with adaptive guidance.
           </p>
         </article>
         <article class="card">
-          <h3>Key Insights</h3>
-          <p class="placeholder-text">
-            Placeholder for 3–5 main findings and design opportunities.
+          <h3>Design Principle</h3>
+          <p>
+            Keep the style playful and nostalgic (pixel-like accents and arcade-like
+            cards), while ensuring content hierarchy remains readable for tutors and teammates.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- Design Process -->
-    <section class="section reveal" id="design">
+    <section class="section reveal">
       <div class="section-header">
-        <h2>Design Process</h2>
-        <p class="section-subtitle">
-          From early ideas to refined concepts.
-        </p>
+        <h2>Portfolio Map</h2>
       </div>
       <div class="section-body timeline">
-        <div class="timeline-item">
-          <h3>Exploration</h3>
-          <p class="placeholder-text">Placeholder for sketches and early concepts.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Concept Development</h3>
-          <p class="placeholder-text">Placeholder for scenarios and storyboards.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Interaction Flow</h3>
-          <p class="placeholder-text">Placeholder for information architecture and flows.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prototype -->
-    <section class="section reveal" id="prototype">
-      <div class="section-header">
-        <h2>Prototype</h2>
-        <p class="section-subtitle">
-          Making Go Runners tangible for users.
-        </p>
-      </div>
-      <div class="section-body two-column">
-        <article class="card">
-          <h3>Prototype Overview</h3>
-          <p class="placeholder-text">
-            Placeholder for describing the main screens and interactions.
-          </p>
+        <article class="timeline-item">
+          <h3>Stage 1 · Motivation & Research</h3>
+          <p>Why emotional support in running matters and what insights validate the opportunity.</p>
         </article>
-        <article class="card">
-          <h3>Key Interactions</h3>
-          <p class="placeholder-text">
-            Placeholder for showing 2–3 important user flows.
-          </p>
+        <article class="timeline-item">
+          <h3>Stage 2 · User Requirements</h3>
+          <p>Primary users, pain points, and requirement priorities that shape product scope.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>Stage 3 · Ideation & Alternatives</h3>
+          <p>Competing concepts, trade-offs, and rationale for selecting the MoodRun direction.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>Stage 4 · Technical Implementation</h3>
+          <p>System architecture, interaction flow, and feature logic for mood-adaptive running.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>Stage 5 · Evaluation & Reflection</h3>
+          <p>Testing outcomes, limitations, and what to improve in the next project iteration.</p>
         </article>
       </div>
     </section>
 
-    <!-- Evaluation -->
-    <section class="section reveal" id="evaluation">
+    <section class="section reveal">
       <div class="section-header">
-        <h2>Evaluation</h2>
-        <p class="section-subtitle">
-          What we learned from testing and reflection.
-        </p>
+        <h2>Team D-7</h2>
+        <p class="section-subtitle">Designing MoodRun from research to reflection.</p>
       </div>
-      <div class="section-body two-column">
-        <article class="card">
-          <h3>Methods</h3>
-          <p class="placeholder-text">
-            Placeholder for usability tests, heuristic evaluation, etc.
-          </p>
+      <div class="section-body team-grid">
+        <article class="team-card">
+          <div class="team-avatar">KL</div>
+          <h3>Kaile Liu</h3>
+          <p class="team-role">Evaluation & Documentation</p>
+          <div class="team-tags">
+            <span>Testing</span>
+            <span>Reflection</span>
+          </div>
         </article>
-        <article class="card">
-          <h3>Findings & Future Work</h3>
-          <p class="placeholder-text">
-            Placeholder for main issues, improvements, and next steps.
-          </p>
+        <article class="team-card">
+          <div class="team-avatar">ZP</div>
+          <h3>Zihang Peng</h3>
+          <p class="team-role">User Research Lead</p>
+          <div class="team-tags">
+            <span>Interview</span>
+            <span>Insights</span>
+          </div>
         </article>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="section reveal" id="team">
-      <div class="section-header">
-        <h2>Our Team</h2>
-        <p class="section-subtitle">CPT208 · Group D‑7 · Go Runners</p>
-      </div>
-      <div class="team-grid">
-        <article class="member-card">
-          <div class="member-avatar">KL</div>
-          <h3 class="member-name">Kaile Liu</h3>
-          <p class="member-role">Evaluation & Documentation</p>
-          <p class="member-id">2363286</p>
+        <article class="team-card">
+          <div class="team-avatar">SF</div>
+          <h3>Sihan Feng</h3>
+          <p class="team-role">Prototype Engineer</p>
+          <div class="team-tags">
+            <span>Flow</span>
+            <span>Interaction</span>
+          </div>
         </article>
-        <article class="member-card">
-          <div class="member-avatar">ZP</div>
-          <h3 class="member-name">Zihang Peng</h3>
-          <p class="member-role">User Research Lead</p>
-          <p class="member-id">2363365</p>
-        </article>
-        <article class="member-card">
-          <div class="member-avatar">SF</div>
-          <h3 class="member-name">Sihan Feng</h3>
-          <p class="member-role">Prototype Engineer</p>
-          <p class="member-id">2363535</p>
-        </article>
-        <article class="member-card">
-          <div class="member-avatar">WT</div>
-          <h3 class="member-name">Wentao Tang</h3>
-          <p class="member-role">Interaction & Visual Design</p>
-          <p class="member-id">2361322</p>
+        <article class="team-card">
+          <div class="team-avatar">WT</div>
+          <h3>Wentao Tang</h3>
+          <p class="team-role">Interaction & Visual Design</p>
+          <div class="team-tags">
+            <span>UI Style</span>
+            <span>System</span>
+          </div>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 CPT208 · Group D‑7 · Go Runners</p>
+    <p>© 2026 MoodRun · CPT208 Group D-7</p>
   </footer>
 
   <script src="js/script.js"></script>
