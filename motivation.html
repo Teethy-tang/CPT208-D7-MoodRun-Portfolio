@@ -28,15 +28,17 @@
       </div>
       <div class="section-body">
         <article class="card">
-          <h3>The Why (200 words)</h3>
+          <h3>The Why</h3>
           <p>
-            We selected the Active Lifestyles track because many student runners start with good intentions but struggle to maintain consistency when stress, fatigue, or low confidence accumulates. Existing running apps mainly reward speed, distance, and competition, but daily motivation is often shaped by emotional readiness rather than physical ability alone. Our project, MoodRun, focuses on that missing layer: helping users decide how to run today based on current mood and context.
+            Modern society faces a silent crisis: mental health. Data reveals that young adults (18-24) suffer the highest depression risk, exacerbated by prolonged working hours (over 10 hours daily increases risk by 23%) [1], indicating a massive unmet demand for accessible relief. Concurrently, the "Running Craze" is exploding. According to the data released by China Athletics Association in 2025 [2], more than 7 million participants engage in the marathon events that have been included, driven by the public's recognition of running as a potent stress reliever.
           </p>
           <p>
-            In our observations around campus running routes and informal peer conversations, we noticed that users frequently skipped planned sessions after intense coursework periods, even when they had enough time. They did not need stronger competition; they needed lower-friction support that felt human, encouraging, and adaptable. Therefore, our core design objective is to create a playful companion that adjusts guidance tone, challenge level, and reflection prompts to user emotions.
+            However, existing apps often focus solely on tracking metrics and performance, failing to address the psychological barriers to exercise. Our app wants to bridge this gap by merging scientific mental health support with the communal energy of running, offering a playful solution for a stressed generation seeking solace on the pavement.
           </p>
           <p>
-            This direction is meaningful for human-centric computing because it treats wellbeing as part of performance instead of separate from it. By combining lightweight mood check-ins with adaptive recommendations, MoodRun aims to improve adherence, reduce discouragement, and support more inclusive running habits for users with different confidence levels and goals.
+            <strong>REFERENCE LIST:</strong><br />
+            [1] China.org.cn. (2025). <em>Blue Book Report: 2024 National Mental Health Development Report.</em><br />
+            [2] China Athletics Association. (2025). <em>2024 China Road Running Blue Book.</em>
           </p>
         </article>
       </div>
@@ -45,49 +47,86 @@
     <section class="section reveal">
       <div class="section-header">
         <h2>The Gap</h2>
-        <p class="section-subtitle">4 academic papers + 4 commercial products; 3 strengths and 3 misses.</p>
+        <p class="section-subtitle">Academic research and commercial products both show value, but neither fully supports emotional needs during running.</p>
       </div>
-      <div class="section-body two-column">
-        <article class="card">
-          <h3>Academic Papers (A1-A4)</h3>
+      <div class="section-body gap-layout">
+        <article class="card gap-card gap-card-wide">
+          <h3>Academic Research</h3>
           <ul class="clean-list">
-            <li><strong>A1:</strong> Emotion-aware coaching in digital fitness (year, venue).</li>
-            <li><strong>A2:</strong> Motivation and adherence in running apps (year, venue).</li>
-            <li><strong>A3:</strong> Adaptive feedback timing for sports UX (year, venue).</li>
-            <li><strong>A4:</strong> Wellbeing-centered persuasive design (year, venue).</li>
+            <li><strong>[1]</strong> Oswald et al. (2020) <em>A scoping review of the relationship between running and mental health</em>.</li>
+            <li><strong>[2]</strong> Szabo et al. (2020) <em>Effect of marathon running on mood and affect</em>.</li>
+            <li><strong>[3]</strong> Fokkema et al. (2019) <em>Impact of a structured running programme on mood disorders</em>.</li>
+            <li><strong>[4]</strong> Van Raalte et al. (2023) <em>Negative self-talk in runners and its psychological implications</em>.</li>
           </ul>
-          <h4>3 Things They Did Well</h4>
-          <ul>
-            <li>Established evidence that emotional state affects exercise persistence.</li>
-            <li>Proposed useful adaptation strategies for feedback and encouragement.</li>
-            <li>Provided evaluation methods for short-term usability and engagement.</li>
-          </ul>
-          <h4>3 Things They Missed</h4>
-          <ul>
-            <li>Limited discussion of real-world, weekly usage continuity.</li>
-            <li>Insufficient integration with playful interaction design.</li>
-            <li>Few studies balance wellbeing and performance goals together.</li>
-          </ul>
+          <div class="gap-columns">
+            <div class="gap-block">
+              <h4>What They Did Well</h4>
+              <ul>
+                <li>Existing studies consistently show that running has significant positive effects on mental health, such as reducing stress, anxiety, and depression [1][2].</li>
+                <li>Research explores both short-term and long-term emotional benefits of running across different populations [1][3].</li>
+                <li>Some studies provide insights into psychological processes during running, such as motivation and self-talk [4].</li>
+              </ul>
+            </div>
+            <div class="gap-block">
+              <h4>What They Missed</h4>
+              <ul>
+                <li>Lack of personalized solutions tailored to users' real-time emotional states [1][3].</li>
+                <li>Limited focus on user experience and interaction during running activities [2].</li>
+                <li>No translation of research findings into interactive digital systems or applications [1][4].</li>
+              </ul>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Commercial Products (C1-C4)</h3>
+        <article class="card gap-card gap-card-wide">
+          <h3>Commercial Products</h3>
           <ul class="clean-list">
-            <li><strong>C1:</strong> Nike Run Club.</li>
-            <li><strong>C2:</strong> Strava.</li>
-            <li><strong>C3:</strong> Adidas Running.</li>
-            <li><strong>C4:</strong> Zombies, Run!</li>
+            <li><strong>[5]</strong> Keep App.</li>
+            <li><strong>[6]</strong> Sigma Fitness App.</li>
+            <li><strong>[7]</strong> Joyrun Running App.</li>
+            <li><strong>[8]</strong> Nike Run Club App.</li>
           </ul>
-          <h4>3 Things They Did Well</h4>
-          <ul>
-            <li>Strong activity tracking and progress visualization.</li>
-            <li>Large communities and social accountability mechanisms.</li>
-            <li>Some playful or narrative elements increase short-term interest.</li>
-          </ul>
-          <h4>3 Things They Missed</h4>
-          <ul>
-            <li>Guidance is mostly performance-first, not mood-first.</li>
-            <li>Limited emotional personalization before and during runs.</li>
-            <li>Reflection features are often shallow or optional add-ons.</li>
+          <div class="gap-columns">
+            <div class="gap-block">
+              <h4>What They Did Well</h4>
+              <ul>
+                <li>Provide comprehensive and precise tracking of running data, such as distance, pace, and heartbeat rate [5][6][7][8].</li>
+                <li>Incorporate motivational features like virtual medals, challenges, and social forums [5][7][8].</li>
+                <li>Some applications introduce AI to analyze each user's physical condition and personalize the most appropriate training schedule [5][7].</li>
+              </ul>
+            </div>
+            <div class="gap-block">
+              <h4>What They Missed</h4>
+              <ul>
+                <li>Lack of monitoring of users' mental well-being [5][6][7][8].</li>
+                <li>Lack of decompression-related functions such as breathing training [5][6][7][8].</li>
+                <li>Do not provide enough emotional support and companionship for stressed users [6].</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="card gap-card">
+          <h3>Identified Gap</h3>
+          <p>
+            Although both academic research and commercial products highlight the benefits of running, there is a clear gap in integrating emotional awareness with interactive and user-centered design.
+          </p>
+          <p>
+            Academic studies focus on outcomes rather than user interaction, while commercial applications emphasize performance tracking or gamification. Neither effectively supports users' emotional needs during running.
+          </p>
+          <p>
+            Therefore, there is an opportunity to design a playful and human-centric system that provides real-time emotional feedback, personalized running experiences, and interactive support, bridging the gap between mental health research and practical applications.
+          </p>
+        </article>
+        <article class="card gap-card">
+          <h3>Reference List</h3>
+          <ul class="clean-list">
+            <li><strong>[1]</strong> Oswald, F., Campbell, J., Williamson, C., Richards, J. and Kelly, P. (2020) <em>A scoping review of the relationship between running and mental health</em>. <em>Journal of Mental Health</em>, 29(3), pp.1-14.</li>
+            <li><strong>[2]</strong> Szabo, A., Gaspar, Z., Kiss, N. and Radvanyi, A. (2020) <em>Effect of marathon running on mood and affect</em>. <em>Journal of Psychosomatic Research</em>, 130, 109918.</li>
+            <li><strong>[3]</strong> Fokkema, T., de Vos, R.J., Krijnen, W.P., et al. (2019) <em>Impact of a structured running programme on mood disorders</em>. <em>BMJ Open Sport &amp; Exercise Medicine</em>, 5(1), e000521.</li>
+            <li><strong>[4]</strong> Van Raalte, J.L., Vincent, A. and Brewer, B.W. (2023) <em>Negative self-talk in runners and its psychological implications</em>. <em>Psychology of Sport and Exercise</em>, 64, 102321.</li>
+            <li><strong>[5]</strong> CalorieTech (n.d.) <em>Keep App</em>. Available at: https://www.calorietech.com/appIntro (Accessed: 24 March 2026).</li>
+            <li><strong>[6]</strong> SigmaApp (n.d.) <em>Sigma Fitness App</em>. Available at: https://www.sigmaapp.com/ (Accessed: 24 March 2026).</li>
+            <li><strong>[7]</strong> Joyrun (n.d.) <em>Joyrun Running App</em>. Available at: https://www.thejoyrun.com/ (Accessed: 24 March 2026).</li>
+            <li><strong>[8]</strong> Nike (n.d.) <em>Nike Run Club App</em>. Available at: https://www.nike.com/nrc-app (Accessed: 24 March 2026).</li>
           </ul>
         </article>
       </div>
@@ -98,20 +137,20 @@
         <h2>The Stakeholders</h2>
         <p class="section-subtitle">Primary and secondary users with distinct personas.</p>
       </div>
-      <div class="section-body two-column">
-        <article class="card">
-          <h3>Primary User Persona</h3>
-          <p><strong>Name:</strong> Lin, 20, undergraduate student runner.</p>
-          <p><strong>Goal:</strong> Maintain 3 runs per week without burnout.</p>
-          <p><strong>Pain Points:</strong> Stress after classes, guilt from missed runs, unstable motivation.</p>
-          <p><strong>Needs:</strong> Quick mood-aware plans and non-judgmental in-run support.</p>
+      <div class="section-body stakeholder-layout">
+        <article class="card stakeholder-card">
+          <div class="stakeholder-label-row">
+            <span class="stakeholder-tag">Primary User</span>
+            <h3>Chen Yu</h3>
+          </div>
+          <img class="stakeholder-image" src="chen-yu.png" alt="Primary user persona board for Chen Yu" />
         </article>
-        <article class="card">
-          <h3>Secondary User Persona</h3>
-          <p><strong>Name:</strong> Hao, 24, beginner fitness user.</p>
-          <p><strong>Goal:</strong> Build a sustainable routine and confidence in public running spaces.</p>
-          <p><strong>Pain Points:</strong> Anxiety about pace, comparison pressure, uncertainty about training load.</p>
-          <p><strong>Needs:</strong> Playful encouragement, flexible targets, and positive reflection prompts.</p>
+        <article class="card stakeholder-card">
+          <div class="stakeholder-label-row">
+            <span class="stakeholder-tag">Secondary User</span>
+            <h3>Jasmine Wang</h3>
+          </div>
+          <img class="stakeholder-image" src="jasmine-wang.png" alt="Secondary user persona board for Jasmine Wang" />
         </article>
       </div>
     </section>
@@ -122,5 +161,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/section-nav.js"></script>
 </body>
 </html>
