@@ -901,16 +901,26 @@ main {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.65rem;
-    padding: 0.72rem 0.85rem;
+    min-height: 4.55rem;
+    padding: 0 0.85rem;
     border-radius: 28px;
   }
 
   .logo {
+    display: inline-flex;
+    align-items: center;
+    height: 2.8rem;
+    min-height: 2.8rem;
     font-size: 0.84rem;
+    line-height: 1;
   }
 
   .nav-toggle {
     display: inline-flex;
+    align-self: center;
+    height: 2.8rem;
+    min-height: 2.8rem;
+    line-height: 1;
   }
 
   .navbar.nav-open .nav-toggle-bars span:nth-child(1) {
@@ -926,6 +936,7 @@ main {
   }
 
   .nav-links {
+    display: none;
     grid-column: 1 / -1;
     width: 100%;
     gap: 0.38rem;
@@ -946,6 +957,7 @@ main {
   }
 
   .navbar.nav-open .nav-links {
+    display: flex;
     max-height: 24rem;
     padding: 0.5rem;
     opacity: 1;
