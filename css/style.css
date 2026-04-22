@@ -201,52 +201,6 @@ main {
   box-shadow: none;
 }
 
-.hero-bg-layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.hero-bg-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  display: block;
-  max-width: none;
-  transform: translate(-50%, -50%) scale(1.04);
-  transform-origin: center center;
-}
-
-.runner-silhouette {
-  fill: #1e1e38;
-  opacity: 0.72;
-  transform-origin: 600px 210px;
-}
-
-.emoji-layer text {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.layer-near text {
-  opacity: 0.17;
-}
-
-.layer-mid text {
-  opacity: 0.12;
-}
-
-.layer-far text {
-  opacity: 0.08;
-}
-
 .hero-inner::before {
   content: none;
 }
@@ -755,155 +709,35 @@ main {
   transform: translateY(0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .runner-silhouette {
-    animation: runner-bob 1.8s ease-in-out infinite;
-  }
-
-  .emoji-layer .drift0 {
-    animation: drift0 6.2s ease-in-out infinite;
-  }
-
-  .emoji-layer .drift1 {
-    animation: drift1 7.8s ease-in-out infinite;
-    animation-delay: 0.5s;
-  }
-
-  .emoji-layer .drift2 {
-    animation: drift2 5.9s ease-in-out infinite;
-    animation-delay: 1.1s;
-  }
-
-  .emoji-layer .drift3 {
-    animation: drift3 8.4s ease-in-out infinite;
-    animation-delay: 0.3s;
-  }
-
-  .emoji-layer .drift4 {
-    animation: drift4 6.7s ease-in-out infinite;
-    animation-delay: 1.8s;
-  }
-
-  .emoji-layer .drift5 {
-    animation: drift5 9.1s ease-in-out infinite;
-    animation-delay: 0.8s;
-  }
-
-  .emoji-layer .drift6 {
-    animation: drift6 7.3s ease-in-out infinite;
-    animation-delay: 2.2s;
-  }
-
-  .emoji-layer .drift7 {
-    animation: drift7 5.5s ease-in-out infinite;
-    animation-delay: 1.4s;
-  }
-
-  @keyframes runner-bob {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-  }
-
-  @keyframes drift0 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-6px, -10px) scale(1.04);
-    }
-  }
-
-  @keyframes drift1 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(8px, -8px) scale(0.97);
-    }
-  }
-
-  @keyframes drift2 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-4px, 7px) scale(1.02);
-    }
-  }
-
-  @keyframes drift3 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(6px, -5px) scale(0.98);
-    }
-  }
-
-  @keyframes drift4 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-9px, 4px) scale(1.03);
-    }
-  }
-
-  @keyframes drift5 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(5px, 9px) scale(0.96);
-    }
-  }
-
-  @keyframes drift6 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-3px, -6px) scale(1.02);
-    }
-  }
-
-  @keyframes drift7 {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(7px, -11px) scale(1.01);
-    }
-  }
-}
-
 @media (max-width: 1100px) {
   .site-header {
     padding: 0.95rem 0.75rem 0;
   }
 
   .navbar {
+    position: relative;
     width: min(100%, 40rem);
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 0.65rem;
+    align-content: center;
+    column-gap: 0.65rem;
     min-height: 4.55rem;
     padding: 0 0.85rem;
     border-radius: 28px;
+    transform-origin: top center;
+    transition:
+      min-height 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
+      padding 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
+      border-radius 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
+      box-shadow 0.34s ease;
+  }
+
+  .navbar.nav-open {
+    min-height: 4.55rem;
+    padding: 0 0.85rem;
+    border-radius: 30px;
+    animation: island-expand 0.42s cubic-bezier(0.2, 0.9, 0.2, 1);
   }
 
   .logo {
@@ -936,31 +770,47 @@ main {
   }
 
   .nav-links {
-    display: none;
-    grid-column: 1 / -1;
+    position: absolute;
+    top: calc(100% + 0.72rem);
+    left: 0;
+    right: 0;
+    display: flex;
     width: 100%;
     gap: 0.38rem;
     margin-left: 0;
     flex-direction: column;
     white-space: normal;
     padding: 0;
+    height: 0;
     max-height: 0;
+    min-height: 0;
     overflow: hidden;
     opacity: 0;
+    transform: translateY(-0.35rem) scale(0.98);
+    transform-origin: top center;
     pointer-events: none;
-    border: 1px solid rgba(84, 225, 255, 0.16);
+    border: 0;
     border-radius: 18px;
     background:
-      linear-gradient(180deg, rgba(24, 26, 55, 0.96), rgba(17, 19, 42, 0.98));
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.24);
-    transition: max-height 0.28s ease, opacity 0.2s ease, padding 0.2s ease;
+      linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+      rgba(12, 13, 30, 0.88);
+    box-shadow:
+      0 18px 42px rgba(0, 0, 0, 0.28),
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    backdrop-filter: blur(16px) saturate(1.2);
+    transition:
+      max-height 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
+      opacity 0.22s ease,
+      transform 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
+      padding 0.24s ease;
   }
 
   .navbar.nav-open .nav-links {
-    display: flex;
+    height: auto;
     max-height: 24rem;
-    padding: 0.5rem;
+    padding: 0.65rem;
     opacity: 1;
+    transform: translateY(0) scale(1);
     pointer-events: auto;
   }
 
@@ -969,6 +819,21 @@ main {
     font-size: 0.8rem;
     padding: 0.68rem 0.78rem;
     border-radius: 14px;
+  }
+
+  @keyframes island-expand {
+    0% {
+      transform: scaleX(1) scaleY(1);
+    }
+    32% {
+      transform: scaleX(0.965) scaleY(0.94);
+    }
+    68% {
+      transform: scaleX(1.012) scaleY(1.01);
+    }
+    100% {
+      transform: scaleX(1) scaleY(1);
+    }
   }
 }
 
@@ -980,13 +845,6 @@ main {
   .hero-inner {
     width: min(100%, 32rem);
     padding: 1.4rem 0.35rem 1.8rem;
-  }
-
-  .hero-bg-svg {
-    width: auto;
-    min-width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%) scale(0.75);
   }
 
   .hero-kicker {
