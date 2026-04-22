@@ -737,7 +737,7 @@ main {
     min-height: 4.55rem;
     padding: 0 0.85rem;
     border-radius: 30px;
-    animation: island-expand 0.42s cubic-bezier(0.2, 0.9, 0.2, 1);
+    animation: island-contract-expand 0.58s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .logo {
@@ -786,7 +786,7 @@ main {
     min-height: 0;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(-0.35rem) scale(0.98);
+    transform: translateY(-0.75rem) scaleX(0.88) scaleY(0.72);
     transform-origin: top center;
     pointer-events: none;
     border: 0;
@@ -799,9 +799,9 @@ main {
       0 0 0 1px rgba(255, 255, 255, 0.04) inset;
     backdrop-filter: blur(16px) saturate(1.2);
     transition:
-      max-height 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
-      opacity 0.22s ease,
-      transform 0.34s cubic-bezier(0.2, 0.9, 0.2, 1),
+      max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.26s ease 0.12s,
+      transform 0.44s cubic-bezier(0.16, 1, 0.3, 1),
       padding 0.24s ease;
   }
 
@@ -812,6 +812,7 @@ main {
     opacity: 1;
     transform: translateY(0) scale(1);
     pointer-events: auto;
+    animation: nav-menu-drop 0.52s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
   }
 
   .nav-links a {
@@ -821,18 +822,38 @@ main {
     border-radius: 14px;
   }
 
-  @keyframes island-expand {
+  @keyframes island-contract-expand {
     0% {
       transform: scaleX(1) scaleY(1);
     }
-    32% {
-      transform: scaleX(0.965) scaleY(0.94);
+    24% {
+      transform: scaleX(0.74) scaleY(0.78);
+      border-radius: 999px;
     }
-    68% {
-      transform: scaleX(1.012) scaleY(1.01);
+    46% {
+      transform: scaleX(0.9) scaleY(0.9);
+      border-radius: 999px;
+    }
+    74% {
+      transform: scaleX(1.018) scaleY(1.012);
     }
     100% {
       transform: scaleX(1) scaleY(1);
+    }
+  }
+
+  @keyframes nav-menu-drop {
+    0% {
+      opacity: 0;
+      transform: translateY(-0.75rem) scaleX(0.82) scaleY(0.62);
+    }
+    52% {
+      opacity: 1;
+      transform: translateY(0.18rem) scaleX(1.018) scaleY(1.035);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
   }
 }
