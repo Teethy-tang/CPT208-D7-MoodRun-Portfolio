@@ -902,17 +902,17 @@ main {
   }
 
   .hero-kicker {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
   }
 
   .hero h1 {
-    font-size: clamp(3.6rem, 18vw, 5.2rem);
+    font-size: clamp(3.1rem, 15vw, 4.4rem);
     letter-spacing: 0.02em;
   }
 
   .hero-subtitle {
-    font-size: 0.98rem;
+    font-size: 0.9rem;
     letter-spacing: 0.04em;
     margin: 0.95rem auto 1.4rem;
   }
@@ -924,6 +924,7 @@ main {
 
   .hero-actions a {
     width: min(100%, 20rem);
+    font-size: 0.92rem;
   }
 
   .gap-columns {
