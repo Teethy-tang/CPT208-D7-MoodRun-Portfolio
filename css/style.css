@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   overflow-x: clip;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
@@ -37,6 +38,34 @@ body {
     radial-gradient(circle at 18% 12%, rgba(84, 225, 255, 0.18), transparent 30%),
     radial-gradient(circle at 85% 4%, rgba(255, 79, 138, 0.2), transparent 35%),
     var(--bg);
+}
+
+.page-unicorn-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg);
+}
+
+.page-unicorn-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(15, 16, 35, 0.12), rgba(15, 16, 35, 0.52)),
+    radial-gradient(circle at 50% 24%, rgba(15, 16, 35, 0.04), rgba(15, 16, 35, 0.58) 78%);
+}
+
+.page-unicorn-bg canvas,
+.page-unicorn-bg iframe,
+.page-unicorn-bg > div {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 a {
@@ -172,6 +201,8 @@ a {
 }
 
 main {
+  position: relative;
+  z-index: 1;
   padding-bottom: 3rem;
 }
 
@@ -192,7 +223,7 @@ main {
 
 .hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 760px;
   padding: 2.2rem 1.4rem;
   border: none;
@@ -627,6 +658,8 @@ main {
 }
 
 .site-footer {
+  position: relative;
+  z-index: 1;
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-soft);
